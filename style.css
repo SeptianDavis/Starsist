@@ -1,0 +1,544 @@
+/* General Styling */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #E0E0E0; /* Light grey text for dark background */
+    background-color: #1A1A1A; /* Very dark grey / nearly black */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1, h2, h3, h4 { /* Added h4 for consistency */
+    font-family: 'Playfair Display', serif;
+    color: #F5F5F5; /* Off-white for headings to stand out */
+}
+
+a {
+    text-decoration: none;
+    color: #66BB6A; /* Brighter green accent for links */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #A5D6A7; /* Lighter green on hover */
+}
+
+/* Header */
+header {
+    background-color: #282828; /* Slightly lighter dark grey for header */
+    padding: 15px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4); /* More prominent shadow for dark theme */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #A5D6A7; /* Light green for logo text */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #E0E0E0; /* Light grey for nav links */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #66BB6A; /* Brighter green on hover */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/background.jpg') no-repeat center center/cover;
+    background-attachment: fixed; /* Parallax effect */
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px; /* Slightly more padding */
+    margin-bottom: 40px;
+}
+
+.hero h2 {
+    font-size: 3.5em; /* Larger heading */
+    margin-bottom: 15px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Text shadow for better readability */
+}
+
+.hero p {
+    font-size: 1.3em; /* Larger paragraph text */
+    margin-bottom: 40px; /* More space before button */
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #66BB6A; /* Brighter green for buttons */
+    color: #1A1A1A; /* Dark text on bright button */
+    padding: 15px 35px; /* Larger padding for button */
+    border-radius: 50px; /* More rounded button */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: #A5D6A7; /* Lighter green on hover */
+    transform: translateY(-3px); /* Subtle lift effect */
+}
+
+/* Produk Section */
+.produk-section {
+    background-color: #1A1A1A; /* Match body background */
+    padding: 60px 0; /* More padding */
+    text-align: center;
+}
+
+.produk-section h3 {
+    font-size: 2.8em; /* Larger heading */
+    margin-bottom: 50px;
+    color: #F5F5F5;
+}
+
+.produk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px; /* More gap */
+    justify-content: center;
+}
+
+.produk-item {
+    background-color: #282828; /* Darker background for items */
+    border: 1px solid #3A3A3A; /* Subtle border */
+    border-radius: 10px; /* More rounded corners */
+    padding: 25px; /* More padding */
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Darker shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produk-item:hover {
+    transform: translateY(-8px); /* More pronounced lift */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5); /* Even darker shadow */
+}
+
+.produk-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Rounded image corners */
+    margin-bottom: 20px; /* More space */
+    border: 1px solid #4A4A4A; /* Subtle image border */
+}
+
+.produk-item h4 {
+    font-size: 1.5em; /* Larger heading */
+    margin-bottom: 12px;
+    color: #F5F5F5;
+}
+
+/* START Styling Harga Diskon */
+.produk-item .product-prices {
+    font-size: 1.2em; /* Base font size for the price container */
+    color: #A5D6A7; /* Green accent for prices */
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2; /* Adjust line height for stacked prices */
+}
+
+.produk-item .original-price {
+    text-decoration: line-through; /* Coret harga asli */
+    color: #B0B0B0; /* Warna abu-abu untuk harga asli */
+    font-size: 0.8em; /* Lebih kecil dari harga diskon */
+    margin-right: 8px; /* Jarak dari harga diskon */
+    font-weight: normal; /* Tidak tebal */
+}
+
+.produk-item .discounted-price {
+    color: #66BB6A; /* Warna hijau cerah untuk harga diskon */
+    font-weight: bold; /* Tebal untuk harga diskon */
+    font-size: 1.3em; /* Lebih besar dari harga asli dan harga default sebelumnya */
+}
+/* END Styling Harga Diskon */
+
+
+.btn-small {
+    background-color: #66BB6A; /* Brighter green for small buttons */
+    color: #1A1A1A; /* Dark text on bright button */
+    padding: 10px 20px; /* Larger padding */
+    border-radius: 5px;
+    font-size: 1em; /* Slightly larger font */
+    transition: background-color 0.3s ease;
+}
+
+.btn-small:hover {
+    background-color: #A5D6A7; /* Lighter green on hover */
+}
+
+/* Product Detail Section Styling */
+.product-detail-section {
+    display: none; /* Hidden by default */
+    background-color: #222222; /* Slightly lighter dark grey */
+    padding: 60px 0;
+    margin-top: 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    color: #E0E0E0;
+}
+
+.product-detail-section .container {
+    padding: 0 20px; /* Adjust container padding for detail view */
+}
+
+.product-detail-section .back-to-products-btn {
+    margin-bottom: 30px;
+    background-color: #4A4A4A; /* Darker button for back */
+    color: #E0E0E0;
+}
+
+.product-detail-section .back-to-products-btn:hover {
+    background-color: #5A5A5A;
+}
+
+.product-detail-section .detail-content {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 40px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.detail-image-wrapper {
+    flex: 1 1 400px; /* Grow, shrink, base width */
+    max-width: 50%; /* Limit image wrapper width */
+    text-align: center;
+}
+
+.detail-image-wrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    border: 1px solid #4A4A4A;
+}
+
+.detail-info {
+    flex: 1 1 400px; /* Grow, shrink, base width */
+    max-width: 50%; /* Limit info width */
+    text-align: left; /* Align text left */
+}
+
+.detail-info h3 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: #F5F5F5;
+}
+
+/* START Styling Harga Diskon di Detail Produk */
+.detail-info .detail-price {
+    font-size: 1em; /* Base size, spans inside will control actual size */
+    margin-bottom: 25px;
+    font-weight: bold; /* Make the wrapper bold */
+}
+
+.detail-info .detail-price .original-price {
+    text-decoration: line-through;
+    color: #B0B0B0;
+    font-size: 1.2em; /* Ukuran lebih besar dari di grid, tapi tetap dicoret */
+    margin-right: 15px;
+    font-weight: normal; /* Tidak tebal */
+}
+
+.detail-info .detail-price .discounted-price {
+    color: #66BB6A;
+    font-weight: bold;
+    font-size: 2.2em; /* Sangat besar untuk menonjol */
+}
+/* END Styling Harga Diskon di Detail Produk */
+
+.detail-info .detail-description {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #D0D0D0;
+}
+
+.detail-info .add-to-cart-btn {
+    /* Uses existing .btn styling */
+    width: auto; /* Override btn-small 100% width if applied */
+    padding: 15px 40px;
+    font-size: 1.1em;
+}
+
+
+/* Mengapa Memilih Starsist Section */
+.mengapa-starsist-section {
+    background-color: #222222; /* Slightly lighter dark grey for this section */
+    padding: 80px 0; /* More padding */
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3); /* Darker shadow */
+}
+
+.mengapa-starsist-section h3 {
+    font-size: 2.8em;
+    margin-bottom: 50px;
+    color: #F5F5F5;
+}
+
+.reason-grid {
+    display: grid;
+    /* Ubah ini untuk memastikan 4 kolom yang sama rata */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    justify-content: center;
+}
+
+.reason-item {
+    background-color: #282828; /* Darker background for items */
+    padding: 35px; /* More padding */
+    border-radius: 10px; /* More rounded corners */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reason-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+.reason-item h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em; /* Larger heading */
+    color: #66BB6A; /* Green accent for reason titles */
+    margin-bottom: 15px;
+}
+
+.reason-item p {
+    font-size: 1.1em; /* Slightly larger text */
+    color: #D0D0D0; /* Lighter grey for paragraph text */
+    line-height: 1.8;
+}
+
+
+/* Tentang Kami & Kontak Sections */
+.tentang-kami-section, .kontak-section {
+    background-color: #1A1A1A; /* Match body background */
+    padding: 60px 0; /* More padding */
+    margin-top: 40px;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.3); /* Darker shadow */
+}
+
+.tentang-kami-section h3, .kontak-section h3 {
+    font-size: 2.8em;
+    margin-bottom: 30px;
+    color: #F5F5F5;
+}
+
+.tentang-kami-section p, .kontak-section p {
+    max-width: 800px;
+    margin: 0 auto 20px auto; /* More margin */
+    font-size: 1.1em; /* Slightly larger text */
+    color: #D0D0D0; /* Lighter grey for paragraph text */
+}
+
+/* Styling for Contact Icons */
+.contact-info-item {
+    display: flex; /* Makes icon and text align horizontally */
+    align-items: center; /* Vertically center them */
+    justify-content: center; /* Center the whole item */
+    margin-bottom: 10px; /* Space between items */
+    font-size: 1.1em; /* Adjust font size if needed */
+}
+
+.contact-icon {
+    font-size: 1.4em; /* Larger icon size */
+    margin-right: 15px; /* Space between icon and text */
+    color: #66BB6A; /* Accent color for icons */
+    width: 30px; /* Fixed width to align icons */
+    text-align: right; /* Align icon to the right within its width */
+}
+
+.contact-info-item strong {
+    margin-right: 5px; /* Space between label and value */
+    color: #F5F5F5; /* Ensure label text is white */
+}
+
+.contact-info-item a {
+    color: #D0D0D0; /* Default link color for contact info */
+}
+
+.contact-info-item a:hover {
+    color: #66BB6A; /* Accent color on hover for contact info links */
+}
+
+/* Footer */
+footer {
+    background-color: #0F0F0F; /* Even darker for footer */
+    color: #B0B0B0; /* Light grey for footer text */
+    text-align: center;
+    padding: 30px 0; /* More padding */
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    /* Responsive adjustment for product detail */
+    .product-detail-section .detail-content {
+        flex-direction: column; /* Stack image and info */
+        align-items: center;
+    }
+    .detail-image-wrapper,
+    .detail-info {
+        max-width: 90%; /* Take more width on smaller screens */
+        flex: none; /* Remove flex sizing */
+    }
+    .detail-info {
+        text-align: center; /* Center text when stacked */
+    }
+    /* Adjust specific sizes for detail view */
+    .detail-info h3 {
+        font-size: 2.5em;
+    }
+    .detail-info .detail-price .original-price {
+        font-size: 1.1em;
+    }
+    .detail-info .detail-price .discounted-price {
+        font-size: 1.8em;
+    }
+
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 10px 10px 10px;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h2 {
+        font-size: 2.8em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+
+    .produk-grid,
+    .reason-grid {
+        grid-template-columns: 1fr; /* Stack items on small screens */
+    }
+
+    .produk-item,
+    .reason-item {
+        padding: 20px;
+    }
+
+    .produk-section h3,
+    .mengapa-starsist-section h3,
+    .tentang-kami-section h3,
+    .kontak-section h3 {
+        font-size: 2.2em; /* Smaller headings on mobile */
+    }
+}
+
+@media (max-width: 576px) {
+    .product-detail-section {
+        padding: 40px 0;
+    }
+    /* Adjust specific sizes for detail view on very small screens */
+    .detail-info h3 {
+        font-size: 2em;
+    }
+    .detail-info .detail-price .original-price {
+        font-size: 1em;
+    }
+    .detail-info .detail-price .discounted-price {
+        font-size: 1.5em;
+    }
+
+    .detail-info .add-to-cart-btn {
+        padding: 12px 30px;
+        font-size: 1em;
+    }
+
+    .hero h2 {
+        font-size: 2.2em;
+    }
+    .hero p {
+        font-size: 0.9em;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.8em;
+    }
+    .produk-item, .reason-item {
+        padding: 15px;
+    }
+    .produk-item h4, .reason-item h4 {
+        font-size: 1.3em;
+    }
+    .reason-item h4 {
+        font-size: 1.5em; /* Keep reason item titles slightly larger */
+    }
+    .tentang-kami-section p, .kontak-section p {
+        font-size: 0.95em;
+    }
+    /* Responsive adjustment for contact icons */
+    .contact-info-item {
+        font-size: 1em;
+    }
+    .contact-icon {
+        font-size: 1.2em;
+        margin-right: 10px;
+        width: 25px;
+    }
+}
