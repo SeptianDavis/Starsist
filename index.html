@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starsist - Keindahan Warisan Batik</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Starsist</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#produk">Produk</a></li>
+                    <li><a href="#mengapa-starsist">Mengapa Starsist?</a></li>
+                    <li><a href="#tentang-kami">Tentang Kami</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Rayakan Pesona Batik Indonesia</h2>
+            <p>Koleksi batik premium yang memadukan tradisi dan gaya modern.</p>
+            <a href="#produk" class="btn">Jelajahi Koleksi</a>
+        </div>
+    </section>
+
+    <section class="video-section">
+        <div class="container">
+            <h3>Jelajahi Dunia Batik Starsist</h3>
+            <div class="video-wrapper">
+                <video id="starsistVideo" controls preload="metadata" poster="img/video-poster.jpg">
+                    <source src="video/video batik.mp4" type="video/mp4">
+                    <source src="video/starsist-promo.webm" type="video/webm">
+                    Maaf, browser Anda tidak mendukung tag video.
+                </video>
+            </div>
+        </div>
+    </section>
+    <section id="produk" class="produk-section">
+        <div class="container">
+            <h3>Produk Unggulan Kami</h3>
+            <div class="produk-grid">
+                <div class="produk-item">
+                    <img src="img/1.png" alt="Batik Floral">
+                    <h4> Batik Floral</h4>
+                    <p class="product-prices">
+                        <span class="original-price">Rp 400.000</span>
+                        <span class="discounted-price">Rp 360.000</span>
+                    </p>
+                    <a href="#product-detail-sekar-jagad" class="btn-small view-detail-btn" data-product="sekar-jagad">Beli Sekarang</a>
+                </div>
+                <div class="produk-item">
+                    <img src="img/2.png" alt="Rok Batik Parang ">
+                    <h4>Rok Batik Parang </h4>
+                    <p class="product-prices">
+                        <span class="original-price">Rp 450.000</span>
+                        <span class="discounted-price">Rp 405.000</span>
+                    </p>
+                    <a href="#product-detail-sekar-kencana" class="btn-small view-detail-btn" data-product="sekar-kencana">Beli Sekarang</a>
+                </div>
+                <div class="produk-item">
+                    <img src="img/3.png" alt="Rok Batik Premium">
+                    <h4>Rok Batik Premium</h4>
+                    <p class="product-prices">
+                        <span class="original-price">Rp 480.000</span>
+                        <span class="discounted-price">Rp 432.000</span>
+                    </p>
+                    <a href="#product-detail-mega-mendung" class="btn-small view-detail-btn" data-product="mega-mendung">Beli Sekarang</a>
+                </div>
+                <div class="produk-item">
+                    <img src="img/4.png" alt="Blus Batik Campuran">
+                    <h4>Blus Batik Campuran</h4>
+                    <p class="product-prices">
+                        <span class="original-price">Rp 520.000</span>
+                        <span class="discounted-price">Rp 468.000</span>
+                    </p>
+                    <a href="#product-detail-parang-rusak" class="btn-small view-detail-btn" data-product="parang-rusak">Beli Sekarang</a>
+                </div>
+                <div class="produk-item">
+                    <img src="img/5.png" alt="Kemeja Batik Flora">
+                    <h4>Kemeja Batik Flora</h4>
+                    <p class="product-prices">
+                        <span class="original-price">Rp 550.000</span>
+                        <span class="discounted-price">Rp 495.000</span>
+                    </p>
+                    <a href="#product-detail-truntum" class="btn-small view-detail-btn" data-product="truntum">Beli Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="product-detail-view" class="product-detail-section">
+        <div class="container">
+            <button class="back-to-products-btn btn-small">← Kembali ke Produk</button>
+            <div class="detail-content">
+                <div class="detail-image-wrapper">
+                    <img id="detail-product-image" src="" alt="Product Detail">
+                </div>
+                <div class="detail-info">
+                    <h3 id="detail-product-title"></h3>
+                    <p class="detail-price" id="detail-product-price"></p>
+                    <div class="detail-description" id="detail-product-description">
+                        </div>
+                    <button class="btn add-to-cart-btn">Beli Sekarang</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="mengapa-starsist" class="mengapa-starsist-section">
+        <div class="container">
+            <h3>Mengapa Memilih Batik Starsist?</h3>
+            <div class="reason-grid">
+                <div class="reason-item">
+                    <h4>1. Kualitas Premium</h4>
+                    <p>Setiap produk Batik Starsist dibuat dari kain pilihan terbaik dengan proses pewarnaan dan pengerjaan yang teliti, menghasilkan batik yang nyaman dipakai, tahan lama, dan tidak mudah luntur.</p>
+                </div>
+                <div class="reason-item">
+                    <h4>2. Desain Unik & Modern</h4>
+                    <p>Kami memadukan motif batik tradisional yang kaya makna dengan sentuhan desain kontemporer, menciptakan koleksi yang otentik namun tetap stylish dan relevan untuk gaya masa kini.</p>
+                </div>
+                <div class="reason-item">
+                    <h4>3. Dukungan Pengrajin Lokal</h4>
+                    <p>Dengan membeli produk Batik Starsist, Anda turut berkontribusi langsung dalam melestarikan budaya batik Indonesia dan mendukung kesejahteraan para pengrajin batik lokal.</p>
+                </div>
+                <div class="reason-item">
+                    <h4>4. Banyak Promo Diskon</h4>
+                    <p>Starsist selalu memberikan penawaran terbaik! Nikmati berbagai promo diskon, penawaran spesial, dan kejutan menarik lainnya yang membuat pengalaman berbelanja batik premium Anda semakin menguntungkan dan menyenangkan.</p>
+                </div>
+                </div>
+        </div>
+    </section>
+
+    <section id="tentang-kami" class="tentang-kami-section">
+        <div class="container">
+            <h3>Tentang Starsist</h3>
+            <p>Starsist lahir dari kecintaan mendalam terhadap warisan batik Indonesia. Kami berkomitmen menyajikan batik berkualitas tinggi, dari motif tradisional hingga desain modern, yang dibuat dengan keahlian dan passion.</p>
+            <p>Dukung pengrajin lokal dan kenakan pesona Indonesia bersama kami!</p>
+        </div>
+    </section>
+
+    <section id="kontak" class="kontak-section">
+        <div class="container">
+            <h3>Terhubung dengan Starsist</h3>
+            <p>
+                Punya pertanyaan seputar koleksi batik kami? Ingin konsultasi gaya atau mencari ukuran yang pas?
+                Tim Starsist dengan senang hati akan membantu Anda menemukan keindahan batik yang sempurna!
+                Jangan ragu untuk menjangkau kami melalui:
+            </p>
+            <p class="contact-info-item">
+                <i class="fas fa-envelope contact-icon"></i>
+                <strong>Email:</strong> <a href="mailto:info@starsist.com">info@starsist.com</a>
+            </p>
+            <p class="contact-info-item">
+                <i class="fab fa-whatsapp contact-icon"></i>
+                <strong>Telepon/WhatsApp:</strong> <a href="https://wa.me/628" target="_blank">+628</a>
+            </p>
+            <p class="contact-info-item">
+                <i class="fas fa-map-marker-alt contact-icon"></i>
+                <strong>Kunjungi Kami:</strong> Jl. Menua Bersamamu No. 143, Semarang, Jawa Tengah
+            </p>
+            <p class="tagline">Kami siap mewujudkan gaya batik impian Anda!</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Starsist. Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

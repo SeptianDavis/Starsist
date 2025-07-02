@@ -1,0 +1,555 @@
+/* General Styling */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #E0E0E0; /* Light grey text for dark background */
+    background-color: #1A1A1A; /* Very dark grey / nearly black */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: #F5F5F5; /* Off-white for headings to stand out */
+}
+
+a {
+    text-decoration: none;
+    color: #FF69B4; /* TEMA BARU: Hot Pink */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #FF99CC; /* TEMA BARU: Light Hot Pink for hover */
+}
+
+/* Header */
+header {
+    background-color: #282828; /* Slightly lighter dark grey for header */
+    padding: 15px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4); /* More prominent shadow for dark theme */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #FF69B4; /* TEMA BARU: Hot Pink */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: #E0E0E0; /* Light grey for nav links */
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FF69B4; /* TEMA BARU: Hot Pink on hover */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/background.jpg') no-repeat center center/cover;
+    background-attachment: fixed; /* Parallax effect */
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px; /* Slightly more padding */
+    margin-bottom: 40px;
+}
+
+.hero h2 {
+    font-size: 3.5em; /* Larger heading */
+    margin-bottom: 15px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Text shadow for better readability */
+}
+
+.hero p {
+    font-size: 1.3em; /* Larger paragraph text */
+    margin-bottom: 40px; /* More space before button */
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #FF69B4; /* TEMA BARU: Hot Pink */
+    color: #1A1A1A; /* Dark text on bright button */
+    padding: 15px 35px; /* Larger padding for button */
+    border-radius: 50px; /* More rounded button */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: #FF99CC; /* TEMA BARU: Light Hot Pink on hover */
+    transform: translateY(-3px); /* Subtle lift effect */
+}
+
+/* NEW: Video Section Styling */
+.video-section {
+    background-color: #222222; /* Slightly darker than body */
+    padding: 60px 0;
+    text-align: center;
+    margin-top: 0px; /* No top margin as it follows hero */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.video-section h3 {
+    font-size: 2.8em;
+    margin-bottom: 40px;
+    color: #F5F5F5;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    /* 16:9 Aspect Ratio (height / width * 100%) */
+    padding-bottom: 56.25%; /* For 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    background-color: #000; /* Black background for video area */
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+.video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; /* Match wrapper border-radius */
+}
+/* END NEW: Video Section Styling */
+
+
+/* Produk Section */
+.produk-section {
+    background-color: #1A1A1A; /* Match body background */
+    padding: 60px 0; /* More padding */
+    text-align: center;
+    margin-top: 40px; /* Add margin top to separate from video section */
+}
+
+.produk-section h3 {
+    font-size: 2.8em; /* Larger heading */
+    margin-bottom: 50px;
+    color: #F5F5F5;
+}
+
+.produk-grid {
+    display: flex; /* Menggunakan Flexbox untuk tata letak horizontal */
+    overflow-x: auto; /* Mengaktifkan scroll horizontal jika item melebihi lebar */
+    scroll-snap-type: x mandatory; /* Opsional: Untuk pengalaman scrolling yang lebih mulus */
+    -webkit-overflow-scrolling: touch; /* Untuk scrolling mulus di iOS */
+    gap: 25px; /* Sedikit kurangi jarak antar item agar lebih rapi */
+    padding-bottom: 20px; /* Ruang di bawah untuk scrollbar jika muncul */
+    justify-content: flex-start; /* Memulai item dari kiri */
+    align-items: flex-start; /* Sejajarkan item ke atas */
+}
+
+.produk-item {
+    flex: 0 0 180px; /* Lebih kecil dari 200px */
+    scroll-snap-align: start;
+    background-color: #282828;
+    border: 1px solid #3A3A3A;
+    border-radius: 10px;
+    padding: 18px; /* Sedikit kurangi padding dari 20px */
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 400px; /* Disesuaikan agar konten tidak meluber, coba sesuaikan jika perlu */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.produk-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+.produk-item img {
+    width: 100%; /* Gambar akan mengisi lebar kontainer produk-item */
+    height: calc(100% / 3 * 4); /* (180px / 3) * 4 = 240px */
+    object-fit: cover; /* Memastikan gambar memenuhi area tanpa terdistorsi */
+    border-radius: 8px; /* Rounded image corners */
+    margin-bottom: 12px; /* Sedikit kurangi margin-bottom */
+    border: 1px solid #4A4A4A; /* Subtle image border */
+}
+
+.produk-item h4 {
+    font-size: 1.1em; /* Sedikit perkecil ukuran heading */
+    margin-bottom: 8px; /* Sedikit kurangi margin */
+    color: #F5F5F5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Batasi hingga 2 baris */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* START Styling Harga Diskon */
+.produk-item .product-prices {
+    font-size: 1em; /* Sedikit perkecil ukuran harga */
+    color: #FF69B4; /* TEMA BARU: Hot Pink */
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: 12px; /* Sedikit kurangi margin */
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.produk-item .original-price {
+    text-decoration: line-through;
+    color: #B0B0B0;
+    font-size: 0.75em; /* Sedikit perkecil */
+    margin-bottom: 2px;
+    font-weight: normal;
+}
+
+.produk-item .discounted-price {
+    color: #FF69B4; /* TEMA BARU: Hot Pink */
+    font-weight: bold;
+    font-size: 1.1em; /* Sedikit perkecil */
+}
+/* END Styling Harga Diskon */
+
+.btn-small {
+    background-color: #FF69B4; /* TEMA BARU: Hot Pink */
+    color: #1A1A1A; /* Dark text on bright button */
+    padding: 7px 15px; /* Sedikit perkecil padding */
+    border-radius: 5px;
+    font-size: 0.85em; /* Sedikit perkecil font */
+    transition: background-color 0.3s ease;
+    margin-top: auto;
+}
+
+.btn-small:hover {
+    background-color: #FF99CC; /* TEMA BARU: Light Hot Pink for hover */
+}
+
+/* Product Detail Section Styling (Dihapus/Disembunyikan) */
+.product-detail-section {
+    display: none !important;
+}
+
+.product-detail-section .back-to-products-btn,
+.detail-info .add-to-cart-btn {
+    display: none !important;
+}
+
+/* Mengapa Memilih Starsist Section */
+.mengapa-starsist-section {
+    background-color: #222222;
+    padding: 80px 0;
+    text-align: center;
+    margin-top: 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.mengapa-starsist-section h3 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #F5F5F5;
+}
+
+.reason-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    justify-content: center;
+}
+
+.reason-item {
+    background-color: #282828;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reason-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+.reason-item h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6em;
+    margin-bottom: 12px;
+    color: #FF69B4; /* TEMA BARU: Hot Pink */
+}
+
+.reason-item p {
+    font-size: 1em;
+    color: #D0D0D0;
+    line-height: 1.7;
+}
+
+/* Tentang Kami & Kontak Sections */
+.tentang-kami-section, .kontak-section {
+    background-color: #1A1A1A;
+    padding: 60px 0;
+    margin-top: 40px;
+    text-align: center;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+}
+
+.tentang-kami-section h3, .kontak-section h3 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #F5F5F5;
+}
+
+.tentang-kami-section p, .kontak-section p {
+    max-width: 800px;
+    margin: 0 auto 25px auto;
+    font-size: 1em;
+    color: #D0D0D0;
+    line-height: 1.7;
+}
+
+/* Styling for Contact Icons */
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    font-size: 1em;
+}
+
+.contact-icon {
+    font-size: 1.3em;
+    margin-right: 12px;
+    color: #FF69B4; /* TEMA BARU: Hot Pink */
+    width: 28px;
+    text-align: right;
+}
+
+.contact-info-item strong {
+    margin-right: 5px;
+    color: #F5F5F5;
+}
+
+.contact-info-item a {
+    color: #D0D0D0;
+}
+
+.contact-info-item a:hover {
+    color: #FF69B4; /* TEMA BARU: Hot Pink on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #0F0F0F;
+    color: #B0B0B0;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .product-detail-section {
+        display: none !important;
+    }
+    .produk-item {
+        flex: 0 0 160px; /* Sedikit lebih kecil di tablet */
+        padding: 15px;
+        min-height: 360px; /* Disesuaikan */
+    }
+    .produk-item img {
+        height: calc(100% / 3 * 4); /* Tetap 3:4 */
+    }
+
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 10px 10px 10px;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero h2 {
+        font-size: 2.8em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+
+    /* NEW: Video Section Responsive */
+    .video-section h3 {
+        font-size: 2.2em;
+    }
+    /* END NEW: Video Section Responsive */
+
+
+    .produk-grid {
+        gap: 30px;
+    }
+
+    .reason-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .reason-item {
+        padding: 20px;
+    }
+
+    .produk-section h3,
+    .mengapa-starsist-section h3,
+    .tentang-kami-section h3,
+    .kontak-section h3 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .produk-grid {
+        gap: 20px; /* Kurangi gap untuk mobile menengah */
+    }
+    .reason-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .produk-item img {
+        height: calc(100% / 3 * 4); /* Tetap 3:4 */
+    }
+    /* NEW: Video Section Responsive */
+    .video-section h3 {
+        font-size: 2em;
+    }
+    /* END NEW: Video Section Responsive */
+}
+
+@media (max-width: 576px) {
+    .product-detail-section {
+        padding: 40px 0;
+    }
+
+    .hero h2 {
+        font-size: 2.2em;
+    }
+    .hero p {
+        font-size: 0.9em;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.8em;
+    }
+    .produk-item {
+        flex: 0 0 140px; /* Lebih kecil lagi di mobile */
+        padding: 12px; /* Kurangi padding lebih lanjut */
+        min-height: 320px; /* Disesuaikan */
+    }
+    .reason-item {
+        padding: 15px;
+    }
+    .produk-item h4, .reason-item h4 {
+        font-size: 1.2em; /* Disesuaikan agar muat */
+    }
+    .reason-item h4 {
+        font-size: 1.5em;
+    }
+    .tentang-kami-section p, .kontak-section p {
+        font-size: 0.95em;
+    }
+    .contact-info-item {
+        font-size: 1em;
+    }
+    .contact-icon {
+        font-size: 1.2em;
+        margin-right: 10px;
+        width: 25px;
+    }
+
+    .produk-grid {
+        gap: 15px; /* Kurangi gap untuk mobile kecil */
+    }
+    .produk-item img {
+        height: calc(100% / 3 * 4); /* Tetap 3:4 */
+    }
+
+    /* Penyesuaian judul dan paragraf di bagian bawah untuk mobile */
+    .produk-section h3,
+    .mengapa-starsist-section h3,
+    .tentang-kami-section h3,
+    .kontak-section h3 {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+    .mengapa-starsist-section p,
+    .tentang-kami-section p,
+    .kontak-section p {
+        font-size: 0.9em;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+    .reason-item h4 {
+        font-size: 1.4em;
+    }
+    .reason-item p {
+        font-size: 0.95em;
+    }
+    /* NEW: Video Section Responsive */
+    .video-section h3 {
+        font-size: 1.8em;
+    }
+    /* END NEW: Video Section Responsive */
+}
